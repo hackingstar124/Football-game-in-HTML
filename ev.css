@@ -1,0 +1,96 @@
+/* styles.css */
+body {
+  background-color: darkgreen;
+  margin: 0;
+  overflow: hidden;
+}
+
+#field {
+  position: relative;
+  height: 100vh;
+}
+
+#goalpost {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  font-size: 200px;
+}
+
+#striker {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+}
+
+#football {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+#goalkeeper {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  font-size: 150px;
+}   
+.goal-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+#goal-line-top {
+  top: 10vh;
+}
+
+#goal-line-bottom {
+  bottom: 10vh;
+}
+
+#goal-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+}
+
+/* Add this animation definition at the end of styles.css */
+@keyframes shoot {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-500px); /* Adjust the distance the ball should travel */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes goalkeeperMove {
+  0% {
+    left: 50%;
+    top: 40px; /* Adjust the top position as needed */
+  }
+  50% {
+    left: 25%;
+    top: 40px; /* Adjust the top position as needed */
+  }
+  100% {
+    left: 75%;
+    top: 40px; /* Adjust the top position as needed */
+  }
+}
+
+#goalkeeper {
+  animation: goalkeeperMove 1.5s ease-in-out infinite;
+}
